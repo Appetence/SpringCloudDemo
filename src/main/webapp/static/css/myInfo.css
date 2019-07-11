@@ -1,0 +1,14 @@
+.gly{
+    margin-right: 0.2rem;
+    color: #999;
+}
+.sec .glyphicon{
+    color: #999;
+}
+.sec div{
+    clear: both;
+    padding: 10px 5px 30px;
+    padding: 0.2rem 0.1rem 0.6rem;
+    /*border-bottom: 1px solid #999;*/
+    position: relative;
+}

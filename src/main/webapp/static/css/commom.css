@@ -1,0 +1,110 @@
+body{
+    background-color: #f0f0f0;
+    position: relative;
+}
+.bcg-head{
+    background: url("/Qiqiang/static/images/headTop3.png");
+    background-size: 100%;
+    height: 150px;
+    height:3rem;
+    position: relative;
+}
+.bcg-head p{
+    margin-bottom: 5px;
+}
+.NO{
+    position: absolute;
+    bottom: 0.54rem;
+    padding: 0.1rem 0.4rem ;
+    margin-bottom: 0rem;
+    width: 50%;
+}
+.bcg-head div{
+    display: inline-block;
+    color: black;
+    vertical-align: text-top;
+}
+.bcg-head div img{
+    width: 70px;
+    height: 70px;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+}
+.info-con{
+    margin-bottom: 100px;
+    margin-bottom: 2rem;
+}
+
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    border-top: 1px solid #969696;
+    padding: 5px 0px;
+    padding: 0.1rem 0rem;
+    color: #999;
+    z-index: 1;
+    background-color: #f0f0f0;
+}
+.footer div{
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+}
+.titleP{
+    padding: 20px 10px 0px;
+    font-size: 16px;
+    padding: 0.4rem 0.2rem 0rem;
+    font-size: 0.32rem;
+    color: #48a3da;
+}
+.form-control{
+    height: 34px;
+    padding: 0px 6px;
+    height: 0.68rem;
+    padding: 0rem 0.12rem;
+}
+.arr-right {
+    display: block;
+    position: absolute;
+    right: 0.2rem;
+    width: 0.14rem;
+    height: 0.24rem;
+    background: url(/Qiqiang/static/images/arr-right.png) no-repeat;
+    background-size: 0.14rem 0.24rem;
+    top: 0.22rem;
+}
+button{
+    background-color: #48a3da!important;
+    color: white;
+}
+#mask,#mask2{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+    top: 0;
+    display: none;
+    z-index: 2;
+}
+
+table th{
+	text-align:center;
+}
+
+table td{
+	vertical-align:middle;
+}
+
+.tableCZButton{
+	width:80px;
+	height:30px;
+}
+
+.footerHP div{
+    display: inline-block;
+    width: 48%;
+    text-align: center;
+} 

@@ -1,0 +1,65 @@
+.form-control{
+    padding-left: 40px;
+    position: relative;
+    padding-left: 0.8rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+}
+.glyphicon{
+    position: absolute;
+    padding:0.24rem 0.28rem;
+    color: #48a3da;
+}
+.iconfont{
+    position: absolute;
+    color: #48a3da;
+}
+.icon-che{
+    top: 0.19rem;
+    left: 0.53rem;
+}
+.icon-cheliang-{
+    top: 0.18rem;
+    left: 0.57rem;
+}
+.icon-yanche{
+    top: 0.18rem;
+    left: 0.58rem;
+}
+.icon-cheling-{
+    top: 0.16rem;
+    left: 0.48rem;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: url("/Qiqiang/static/images/chbcg.png") no-repeat;
+    background-size: 100%;
+}
+.col-xs-11{
+    margin-top: 0.2rem;
+}
+button{
+    background-color: #48a3da!important;
+    color: white;
+}
+p{
+    color: red;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 0.1rem;
+    font-weight: bolder;
+}
+input,select{
+    background-color: transparent!important;
+}
+.col-xs-11 span{
+    color: red;
+    position: absolute;
+    top: 0.2rem;
+    right: -0.2rem;
+    font-weight: bolder;
+}
+.container{
+    margin-top: 7%;
+}

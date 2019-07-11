@@ -1,0 +1,27 @@
+.sec{
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.sec div{
+    display: inline-block;
+    width: 33.3%;
+    height: 100px;
+    height: 2rem;
+    vertical-align: middle;
+    padding: 0rem;
+    border-right: 1px solid #ccc;
+}
+.sec p{
+    color: black;
+}
+.sec div i{
+    margin-top: 15%;
+    display: inline-block;
+}
+.rMar10{
+    margin-right: 10px;
+    margin-right: 0.2rem;
+}
+.iconfont {
+    font-size:28px !important;
+}

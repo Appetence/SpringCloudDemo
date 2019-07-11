@@ -1,0 +1,566 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>配件信息</title>
+<link rel="stylesheet" href="../../static/css/bootstrap.css"/>
+<link rel="stylesheet" href="../../static/css/commom.css"/>
+<link rel="stylesheet" href="../../static/css/staReport.css"/>
+<link rel="stylesheet" href="../../static/css/spareInfo.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/css/iconfont.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 bcg-head text-center" style="">
+            <div>
+                <img src="../../static/images/d4.jpg" alt="" style="margin-top: 16%;">
+                <p style="margin-top: 5px;">
+                    <span>张三</span>
+                </p>
+                <p class="text-center NO" style="left: 0rem;">
+                    <span class="iconfont  icon-huiyuanqia-xianxing" style="font-size: 16px!important;"></span>
+                    <br>
+                    <span>ID-123456</span>
+                </p>
+                <p class="text-center NO" style="right: 0rem;">
+                    <span class="iconfont  icon-jifen" style="font-size: 16px!important;"></span>
+                    <br>
+                    <span>345</span>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-12 info-con">
+            <p class="titleP"><i class="iconfont icon-peijian"></i> 配件信息</p>
+            <section class="sec">
+                <div class="titleDiv">
+                    <span class="active One">出/入库</span><span class="Two">配件查询</span><span class="Three">配件预定</span></a>
+                </div>
+                <!--出/入库开始-->
+                <div id="One" class="">
+                    <div class="row topSec">
+                        <span class="col-md-2">操作类型</span>
+                        <span class="col-md-10">
+                            <select name="" id="" class="form-control">
+                                <option value="修车">出库</option>
+                                <option value="">入库</option>
+                                <option value="">库存</option>
+                            </select>
+                    </span>
+                    </div>
+                    <div class="toUpSec">
+                        <i class="glyphicon glyphicon-remove pull-right"></i>
+                        <div class="row" style="margin-top: 25px;margin-top: 0.5rem;">
+                            <span class="col-md-2">配件类型</span>
+                            <span class="col-md-10">
+                            <select name="" id="" class="form-control">
+                                <option value="修车">轮胎</option>
+                                <option value="">发动机</option>
+                                <option value="">玻璃</option>
+                            </select>
+                    </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2">配件名称</span>
+                            <span class="col-md-10">
+                            <select name="" id="" class="form-control">
+                                <option value="">米其林轮胎A1</option>
+                                <option value="">米其林轮胎A2</option>
+                                <option value="">米其林轮胎A13</option>
+                            </select>
+                    </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2" style="vertical-align: top;margin-top: 0.18rem;">供应商</span>
+                            <span class="col-md-10">
+                              <div id="GYS-div">
+                                    <span>
+                                        <!--这个是个多选框，用onchange事件的时候 ，将这个select的id传进去-->
+                                               <select name="trains" onchange="qlcTrainS('qlc_zdz1')" class="form-control" id="qlc_zdz1">
+                                                   <option value="test1">test1</option>
+                                                   <option value="test2">test2</option>
+                                                   <option value="test3">test3</option>
+                                                   <option value="test4">test4</option>
+                                                   <option value="test5">test5</option>
+                                               </select>
+                                    </span>
+                                    <span>
+                                              <input type="text" name="ccdd" id="qlc_zdz" class="ccdd" placeholder="可选择也可输入的下拉框">
+                                    </span>
+                        </div>
+                    </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2">单价(元)</span>
+                            <span class="col-md-10">
+                        <input type="number" value="2999.00" class="form-control">
+                    </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2">出厂日期</span>
+                            <span class="col-md-10">
+                        <input type="date" value="2018-09-18" class="form-control">
+                    </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2">保质期</span>
+                            <span class="col-md-10">
+                        <input type="text" value="10年" class="form-control">
+                    </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2">进货数量</span>
+                            <span class="col-md-10">
+                        <input type="number" value="13" class="form-control">
+                    </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2">进货日期</span>
+                            <span class="col-md-10">
+                        <input type="date" value="2018-09-18" class="form-control">
+                    </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2">备注</span>
+                            <span class="col-md-10">
+                        <input type="text" value="备注" class="form-control">
+                    </span>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top: 20px;">
+                        <button class="btn" style="background-color: #48a3da;">增加</button>
+                        <button class="btn" style="background-color: #48a3da;">确定</button>
+                    </div>
+                </div>
+                <!--出/入库结束-->
+
+                <!--配件查询开始-->
+                <div id="Two">
+                    <div class="topSec">
+                        <div class="row" style="margin-top: 0rem;">
+                            <span class="col-md-2">查询类型</span>
+                            <span class="col-md-10">
+                            <select name="" id="" class="form-control">
+                                <option value="修车">出库</option>
+                                <option value="">入库</option>
+                                <option value="">库存</option>
+                            </select>
+                    </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2">配件类型</span>
+                            <span class="col-md-10">
+                            <select name="" id="" class="form-control">
+                                <option value="修车">轮胎</option>
+                                <option value="">发动机</option>
+                                <option value="">玻璃</option>
+                            </select>
+                    </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2">配件名称</span>
+                            <span class="col-md-10">
+                            <select name="" id="" class="form-control">
+                                <option value="">米其林轮胎A1</option>
+                                <option value="">米其林轮胎A2</option>
+                                <option value="">米其林轮胎A13</option>
+                            </select>
+                    </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2">供应商</span>
+                            <span class="col-md-10">
+                            <select name="" id="" class="form-control">
+                                <option value="">A</option>
+                                <option value="">2B</option>
+                                <option value="">3C</option>
+                            </select>
+                    </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2">开始日期</span>
+                            <span class="col-md-10">
+                        <input type="date" value="2018-09-18" class="form-control">
+                    </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2">结束日期</span>
+                            <span class="col-md-10">
+                        <input type="date" value="2018-09-18" class="form-control">
+                    </span>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top: 10px;margin-top: 0.2rem;">
+                        <button class="btn sure" style="background-color: #48a3da;">查询</button>
+                    </div>
+                </div>
+                <!--配件查询结束-->
+
+                <!--配件预定开始-->
+                <div id="Three">
+                    <div class="ThreeTop">
+                        <div class="row ThreeSea">
+                            <button class="btn btn-block ThreeSeaAdd">新增预定</button>
+                        </div>
+                        <div class="row ThreeSea">
+                            <span><input type="text" placeholder="配件类型/配件类型/供应商" class="form-control"></span> <button class="btn">搜索</button>
+                        </div>
+                        <div class="tableDiv">
+                            <div>
+                                <form action="">
+                                    <table class="table">
+                                        <tr>
+                                            <th>配件类型</th>
+                                            <th>配件类型</th>
+                                            <th>供应商</th>
+                                            <th>预定数量</th>
+                                            <th>预定人</th>
+                                            <th>手机号</th>
+                                            <th>预定时间</th>
+                                            <th>备注</th>
+                                        </tr>
+                                        <tr>
+                                            <td>轮胎</td>
+                                            <td>米其林</td>
+                                            <td>供应商A</td>
+                                            <td>300.00</td>
+                                            <td>2018/09/19</td>
+                                            <td>3年</td>
+                                            <td>20</td>
+                                            <td>无</td>
+                                        </tr>
+                                        <tr>
+                                            <td>轮胎</td>
+                                            <td>米其林</td>
+                                            <td>供应商A</td>
+                                            <td>300.00</td>
+                                            <td>2018/09/19</td>
+                                            <td>3年</td>
+                                            <td>20</td>
+                                            <td>无</td>
+                                        </tr>
+                                        <tr>
+                                            <td>轮胎</td>
+                                            <td>米其林</td>
+                                            <td>供应商A</td>
+                                            <td>300.00</td>
+                                            <td>2018/09/19</td>
+                                            <td>3年</td>
+                                            <td>20</td>
+                                            <td>无</td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+
+                        </div>
+                        <div class="text-center">
+                            <button class="btn">首页</button>
+                            <button class="btn">上一页</button>
+                            <button class="btn">下一页</button>
+                            <button class="btn">尾页</button>
+                        </div>
+                    </div>
+                    <div class="ThreeBot" style="display: none">
+                        <div class="row ThreeSea">
+                            <span>
+                                <input type="text" placeholder="姓名/手机号/车牌号" class="form-control">
+                            </span>
+                            <button class="btn">搜索</button>
+                        </div>
+                        <form action="">
+                            <table class="table" style="margin-top: 10px;margin-top: 0.2rem;">
+                                <tr>
+                                    <td>姓名</td>
+                                    <td>手机号</td>
+                                    <td>车牌号</td>
+                                    <td>卡级别</td>
+                                    <td>选择</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>洗车</td>
+                                    <td>-200.00</td>
+                                    <td>洗车</td>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>打蜡</td>
+                                    <td>-298.00</td>
+                                    <td>洗车</td>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </form>
+                        <div class="text-center">
+                            <button class="btn">首页</button>
+                            <button class="btn">上一页</button>
+                            <button class="btn">下一页</button>
+                            <button class="btn">尾页</button>
+                        </div>
+                        <div class="toUpSec" style="margin-top:0.4rem;">
+                            <div class="row">
+                                <span class="col-md-2">配件类型</span>
+                                <span class="col-md-10">
+                            <select name="" id="" class="form-control">
+                                <option value="修车">轮胎</option>
+                                <option value="">发动机</option>
+                                <option value="">玻璃</option>
+                            </select>
+                                </span>
+
+                            </div>
+                            <div class="row">
+                                <span class="col-md-2">配件名称</span>
+                                <span class="col-md-10">
+                            <select name="" id="" class="form-control">
+                                <option value="修车">A</option>
+                                <option value="">B</option>
+                                <option value="">C</option>
+                            </select></span>
+                            </div>
+                            <div class="row">
+                                <span class="col-md-2">供应商</span>
+                                <span class="col-md-10">
+                            <select name="" id="" class="form-control">
+                                <option value="修车">A</option>
+                                <option value="">B</option>
+                                <option value="">C</option>
+                            </select>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <span class="col-md-2">预定数量</span>
+                                <span class="col-md-10">
+                            <input type="number" value="100" class="form-control">
+                    </span>
+                            </div>
+
+                            <div class="row">
+                                <span class="col-md-2">备注</span>
+                                <span class="col-md-10">
+                            <input type="text" value="备注" class="form-control">
+                    </span>
+                            </div>
+
+                        </div>
+                        <div class="text-center" style="margin-top: 0.2rem;">
+                            <button class="btn">预定</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!--配件预定结束-->
+
+            </section>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <i class="glyphicon glyphicon-list"></i>
+            <p>我的信息</p>
+        </div>
+        <div>
+            <i class="glyphicon glyphicon-list-alt"></i>
+            <p>消费详情</p>
+        </div>
+        <div>
+            <i class="glyphicon glyphicon-usd"></i>
+            <p>赚钱</p>
+        </div>
+    </footer>
+</div>
+<!--弹窗开始-->
+<div id="mask">
+    <div class="simpleAlertBody">
+        <i class="simpleAlertBodyClose 	glyphicon glyphicon-remove"></i>
+        <div class="rightTop">
+            查询列表
+        </div>
+        <div class="simpleAlertBodyContent">
+            <div class="tableDiv">
+                <div>
+                    <form action="">
+                        <table class="table">
+                            <tr>
+                                <th>配件类型</th>
+                                <th>配件名称</th>
+                                <th>供应商</th>
+                                <th>单价(元)</th>
+                                <th>出场日期</th>
+                                <th>保质期</th>
+                                <th>进货数量</th>
+                                <th>进货日期</th>
+                                <th>备注</th>
+                            </tr>
+                            <tr>
+                                <td>轮胎</td>
+                                <td>米其林</td>
+                                <td>供应商A</td>
+                                <td>300.00</td>
+                                <td>2018/09/19</td>
+                                <td>3年</td>
+                                <td>20</td>
+                                <td>2018/09/19</td>
+                                <td>无</td>
+                            </tr>
+                            <tr>
+                                <td>轮胎</td>
+                                <td>米其林</td>
+                                <td>供应商A</td>
+                                <td>300.00</td>
+                                <td>2018/09/19</td>
+                                <td>3年</td>
+                                <td>20</td>
+                                <td>2018/09/19</td>
+                                <td>无</td>
+                            </tr>
+                            <tr>
+                                <td>轮胎</td>
+                                <td>米其林</td>
+                                <td>供应商A</td>
+                                <td>300.00</td>
+                                <td>2018/09/19</td>
+                                <td>3年</td>
+                                <td>20</td>
+                                <td>2018/09/19</td>
+                                <td>无</td>
+                            </tr>
+                            <tr>
+                                <td>轮胎</td>
+                                <td>米其林</td>
+                                <td>供应商A</td>
+                                <td>300.00</td>
+                                <td>2018/09/19</td>
+                                <td>3年</td>
+                                <td>20</td>
+                                <td>2018/09/19</td>
+                                <td>无</td>
+                            </tr>
+                            <tr>
+                                <td>轮胎</td>
+                                <td>米其林</td>
+                                <td>供应商A</td>
+                                <td>300.00</td>
+                                <td>2018/09/19</td>
+                                <td>3年</td>
+                                <td>20</td>
+                                <td>2018/09/19</td>
+                                <td>无</td>
+                            </tr>
+                            <tr>
+                                <td>轮胎</td>
+                                <td>米其林</td>
+                                <td>供应商A</td>
+                                <td>300.00</td>
+                                <td>2018/09/19</td>
+                                <td>3年</td>
+                                <td>20</td>
+                                <td>2018/09/19</td>
+                                <td>无</td>
+                            </tr>
+                            <tr>
+                                <td>轮胎</td>
+                                <td>米其林</td>
+                                <td>供应商A</td>
+                                <td>300.00</td>
+                                <td>2018/09/19</td>
+                                <td>3年</td>
+                                <td>20</td>
+                                <td>2018/09/19</td>
+                                <td>无</td>
+                            </tr>
+                            <tr>
+                                <td>轮胎</td>
+                                <td>米其林</td>
+                                <td>供应商A</td>
+                                <td>300.00</td>
+                                <td>2018/09/19</td>
+                                <td>3年</td>
+                                <td>20</td>
+                                <td>2018/09/19</td>
+                                <td>无</td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <div style="position: absolute;bottom: 0.2rem;left: 15%;">
+            <button class="btn">首页</button>
+            <button class="btn">上一页</button>
+            <button class="btn">下一页</button>
+            <button class="btn">尾页</button>
+        </div>
+    </div>
+</div>
+<!--弹窗结束-->
+<script>
+	(function (doc, win) {
+	  var docEl = doc.documentElement,
+		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		recalc = function () {
+		  var clientWidth = docEl.clientWidth;
+		  if (!clientWidth) return;
+		  docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+		};
+
+	  if (!doc.addEventListener) return;
+	  win.addEventListener(resizeEvt, recalc, false);
+	  doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+<script type="text/javascript" src="../../static/js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="../../static/js/mask.js"></script>
+<script>
+    $(".titleDiv span").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+    })
+    $(".simpleAlertBtn,.simpleAlertBodyClose").click(function () {
+        $("#mask").fadeOut();
+    })
+    $(".sure").click(function () {
+        $("#mask").fadeIn();
+    })
+
+    $(".One").click(function () {
+        $("#One").fadeIn();
+        $("#Two").hide();
+        $("#Three").hide();
+    })
+    $(".Two").click(function () {
+        $("#One").hide();
+        $("#Two").fadeIn();
+        $("#Three").hide();
+    })
+    $(".Three").click(function () {
+        $("#One").hide();
+        $("#Two").hide();
+        $("#Three").fadeIn();
+    })
+    $(".ThreeSeaAdd").click(function () {
+        $(".ThreeTop").fadeOut();
+        $(".ThreeBot").fadeIn();
+    })
+</script>
+<script>
+    <!--将select的值赋给input框-->
+    function qlcTrainS(idName) {
+        var arrValue=document.getElementById(idName).options[document.getElementById(idName).selectedIndex].value;
+        $("#"+idName+"").parent('span').next('span').children('input.ccdd').val(arrValue)
+    }
+
+</script>
+
+</body>
+</html>

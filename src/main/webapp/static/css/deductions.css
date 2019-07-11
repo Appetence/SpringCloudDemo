@@ -1,0 +1,127 @@
+
+.repair,.wash{
+    display:none;
+}
+.repairDiv .col-md-2,.otherDiv .col-md-2{
+    display: inline-block;
+    width: 25%;
+}
+.toUpSec{
+    margin-top:0rem;
+}
+.toUpSec .row{
+    width: 100%;
+    margin: 0.2rem 0rem 0rem;
+}
+.toUpSec .row .col-md-2,.repairDiv .row .col-md-2{
+    padding-left: 0rem !important;
+}
+.toUpSec .row .col-md-10,.repairDiv .row .col-md-10{
+    display: inline-block;
+    width: 70%;
+}
+.toUpSec .row .col-md-10 .form-control,.repairDiv .row .col-md-10 .form-control{
+    width: 100%;
+    display: inline-block;
+}
+.wCar .col-md-2{
+    display: inline-block;
+    width: 28%;
+}
+.wCar .col-md-10{
+    display: inline-block;
+    width: 65%;
+}
+.wCar {
+    padding: 0.2rem;
+}
+.wCar .row{
+    padding-top: 0.2rem;
+}
+.titleDiv span {
+    display: inline-block;
+    width: 50%;
+    border: 1px solid #48a3da;
+    text-align: center;
+    color: #48a3da;
+    height: 32px;
+    line-height: 32px;
+    height: 0.64rem;
+    line-height: 0.64rem;
+}
+.active {
+    background-color: #48a3da;
+    color: white!important;
+}
+.sec div span{
+    display: inline-block;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 80%;
+}
+button{
+    background-color: #48a3da!important;
+    color: white;
+}
+
+.simpleAlert {
+    position: fixed;
+    z-index: 1000;
+}
+
+.simpleAlertBody {
+    position: fixed;
+    width: 65%;
+    height: 300px;
+    top: 30%;
+    left: 17%;
+    background-color: #fff;
+    border-radius: 5%;
+}
+
+.simpleAlertBodyClose {
+    position: absolute;
+    top: -25px;
+    right: -20px;
+    padding: 5px;
+    font-size: 20px;
+    color: #48a3da;
+}
+
+.simpleAlertBodyContent {
+    position: absolute;
+    top: 25%;
+    width: 96%;
+    height: 160px;
+    overflow-y: auto;
+    left: 2%;
+    /*text-align: center;*/
+    font-size: 16px;
+    color: #333;
+}
+
+.simpleAlertBtn {
+    position: absolute;
+    width: 70px;
+    height: 34px;
+    bottom: 6%;
+    border: 1px solid #bfbfbf;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    right: 36%;
+}
+.rightTop{
+    border-bottom: 1px solid #48a3da;
+    padding: 0.2rem 0.4rem;
+    font-size: 18px;
+    color: #48a3da;
+}
+
+.simpleAlertBodyContent p{
+    position: relative;
+}
+.simpleAlertBodyContent p span{
+    margin-left: 42%;
+}

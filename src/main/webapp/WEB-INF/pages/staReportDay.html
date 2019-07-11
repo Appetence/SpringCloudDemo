@@ -1,0 +1,162 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>统计报表</title>
+    <link rel="stylesheet" href="../../static/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../static/css/commom.css"/>
+    <link rel="stylesheet" href="../../static/css/staReport.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/iconfont.css">
+    <style>
+        select {
+            appearance:none;
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            background-color:#48a3da!important;
+            color:#fff!important;
+            padding-left:0.5rem!important;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 bcg-head text-center" style="">
+            <div>
+                <img src="../../static/images/d4.jpg" alt="" style="margin-top: 16%;">
+                <p style="margin-top: 5px;">
+                    <span>张三</span>
+                </p>
+                <p class="text-center NO" style="left: 0rem;">
+                    <span class="iconfont  icon-huiyuanqia-xianxing" style="font-size: 16px!important;"></span>
+                    <br>
+                    <span>ID-123456</span>
+                </p>
+                <p class="text-center NO" style="right: 0rem;">
+                    <span class="iconfont  icon-jifen" style="font-size: 16px!important;"></span>
+                    <br>
+                    <span>345</span>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-12 info-con">
+            <p class="titleP"><i class="iconfont icon-tongjibaobiao"></i> 统计报表</p>
+            <section class="sec">
+                <div class="titleDiv">
+                    <span class="active ">日报</span><span>汇总</span><span>查询统计</span>
+                </div>
+
+                <!--日报开始-->
+                <div id="One" class="daily">
+
+                    <div class="row" style="padding: 0px 15px;margin-top: 10px;">
+                        <b>今日概况</b>
+                    </div>
+                    <form action="">
+                        <table class="table table-bordered" style="margin-top: 5px;table-layout:fixed;">
+                            <tr>
+                                <td>时间</td>
+                                <td>充值金额</td>
+                                <td>消费金额</td>
+                                <td>活跃会员</td>
+                            </tr>
+                            <tr>
+                                <td>今天</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>昨天</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>本月</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>上月</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                        </table>
+                    </form>
+
+                    <div class="row" style="padding: 0px 15px">
+                        <b>今日消费情况</b>
+                    </div>
+                    <form action="">
+                        <table class="table table-bordered" style="margin-top: 5px;table-layout:fixed;">
+                            <tr>
+                                <td>序号</td>
+                                <td>消费项目</td>
+                                <td>消费金额</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>洗车</td>
+                                <td>-200.00</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>打蜡</td>
+                                <td>-298.00</td>
+                            </tr>
+
+                        </table>
+                    </form>
+                    <div class="text-center">
+                        <button class="btn">首页</button>
+                        <button class="btn">上一页</button>
+                        <button class="btn">下一页</button>
+                        <button class="btn">尾页</button>
+                    </div>
+
+                </div>
+                <!--日报结束-->
+
+            </section>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <i class="glyphicon glyphicon-list"></i>
+            <p>我的信息</p>
+        </div>
+        <div>
+            <i class="glyphicon glyphicon-list-alt"></i>
+            <p>消费详情</p>
+        </div>
+        <div>
+            <i class="glyphicon glyphicon-usd"></i>
+            <p>赚钱</p>
+        </div>
+    </footer>
+</div>
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<script type="text/javascript" src="../../static/js/jquery-2.2.3.min.js"></script>
+</body>
+</html>

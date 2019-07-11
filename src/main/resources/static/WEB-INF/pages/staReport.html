@@ -1,0 +1,443 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>统计报表</title>
+    <link rel="stylesheet" href="../../static/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../static/css/commom.css"/>
+    <link rel="stylesheet" href="../../static/css/staReport.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/iconfont.css">
+    <link rel="stylesheet" href="../../static/css/daterangepicker.css">
+    <style>
+        select {
+            appearance:none;
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            background-color:#48a3da!important;
+            color:#fff!important;
+            padding-left:0.5rem!important;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 bcg-head text-center" style="">
+            <div>
+                <img src="../../static/images/d4.jpg" alt="" style="margin-top: 16%;">
+                <p style="margin-top: 5px;">
+                    <span>张三</span>
+                </p>
+                <p class="text-center NO" style="left: 0rem;">
+                    <span class="iconfont  icon-huiyuanqia-xianxing" style="font-size: 16px!important;"></span>
+                    <br>
+                    <span>ID-123456</span>
+                </p>
+                <p class="text-center NO" style="right: 0rem;">
+                    <span class="iconfont  icon-jifen" style="font-size: 16px!important;"></span>
+                    <br>
+                    <span>345</span>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-12 info-con">
+            <p class="titleP"><i class="iconfont icon-tongjibaobiao"></i> 统计报表</p>
+            <section class="sec">
+                <div class="titleDiv">
+                    <span>日报</span><span>汇总</span><span class="active">查询统计</span>
+                </div>
+                <!--查询统计开始-->
+                <div id="Three" class="">
+                    <!--充值项目开始-->
+                    <div class="row" style="padding: 0px 15px;margin-top: 10px;">
+                        <b>充值消费情况</b>
+                    </div>
+                    <div style="margin-top: 0.2rem;">
+                        <p>
+                            <button class="btn" id="daterange-btn">
+                                <span>
+                                  <i class="fa fa-calendar"></i> 日期选择
+                                </span>
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </p>
+                        <p>
+                            <select name="" id="" class="form-control" style="display: inline-block;width: 80%;">
+                                <option value="">选择客户类型</option>
+                                <option value="">A</option>
+                                <option value="">B</option>
+                            </select>
+                            <button class="btn">查询</button>
+                        </p>
+                    </div>
+                    <div id="ThreeBar"  style="height: 100%;height:200px!important;"></div>
+                    <!--充值项目结束-->
+                    <!--消费项目开始-->
+                    <div class="row" style="padding: 0px 15px;margin-top: 0.1rem;">
+                        <b>消费项目占比</b>
+                    </div>
+                    <div style="margin-top: 0.2rem;">
+                        <p>
+                            <button class="btn" id="daterange-btn2">
+                                <span>
+                                  <i class="fa fa-calendar"></i> 日期选择
+                                </span>
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </p>
+                        <p>
+                            <select name="" id="" class="form-control" style="background-color: #48a3da;display: inline-block;width: 80%;">
+                                <option value="">选择客户类型</option>
+                                <option value="">A</option>
+                                <option value="">B</option>
+                            </select>
+                            <button class="btn">查询</button>
+                        </p>
+                    </div>
+                    <div id="ThreePie"  style="height: 100%;height:210px!important;"></div>
+                    <!--消费项目结束-->
+                    <!--综合查询开始-->
+                    <div class="row" style="padding: 0px 15px;margin-top: 0.1rem;">
+                        <b>综合查询</b>
+                    </div>
+                    <div style="margin-top: 0.2rem;">
+                        <p>
+                            <button class="btn" id="daterange-btn3">
+                                <span>
+                                  <i class="fa fa-calendar"></i> 日期选择
+                                </span>
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <select name="" id="" class="form-control" style="background-color: #48a3da;display: inline-block;width: 40%;float: right;">
+                                <option value="">选择项目</option>
+                                <option value="">A</option>
+                                <option value="">B</option>
+                            </select>
+                            <div>
+                                <span><input style="width: 80%;display: inline-block;" type="text" placeholder="姓名/手机号/车牌号/项目" class="form-control"></span> <button class="btn">查询</button>
+                            </div>
+                        </p>
+
+                        <div class="tableDiv">
+                            <div>
+                                <form action="">
+                                    <table class="table">
+                                        <tr>
+                                            <th>项目</th>
+                                            <!--<th>支付类型</th>-->
+                                            <th>姓名</th>
+                                            <th>手机号</th>
+                                            <th>消费金额</th>
+                                            <!--<th>余额</th>-->
+                                            <th>消费时间</th>
+                                        </tr>
+                                        <tr>
+                                            <td>轮胎</td>
+                                            <!--<td>米其林</td>-->
+                                            <td>供应商A</td>
+                                            <td>300.00</td>
+                                            <td>2018/09/19</td>
+                                            <!--<td>3年</td>-->
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>轮胎</td>
+                                            <!--<td>米其林</td>-->
+                                            <td>供应商A</td>
+                                            <td>300.00</td>
+                                            <td>2018/09/19</td>
+                                            <!--<td>3年</td>-->
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>轮胎</td>
+                                            <!--<td>米其林</td>-->
+                                            <td>供应商A</td>
+                                            <td>300.00</td>
+                                            <td>2018/09/19</td>
+                                            <!--<td>3年</td>-->
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>轮胎</td>
+                                            <!--<td>米其林</td>-->
+                                            <td>供应商A</td>
+                                            <td>300.00</td>
+                                            <td>2018/09/19</td>
+                                            <!--<td>3年</td>-->
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>轮胎</td>
+                                            <!--<td>米其林</td>-->
+                                            <td>供应商A</td>
+                                            <td>300.00</td>
+                                            <td>2018/09/19</td>
+                                            <!--<td>3年</td>-->
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>轮胎</td>
+                                            <!--<td>米其林</td>-->
+                                            <td>供应商A</td>
+                                            <td>300.00</td>
+                                            <td>2018/09/19</td>
+                                            <!--<td>3年</td>-->
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>轮胎</td>
+                                            <!--<td>米其林</td>-->
+                                            <td>供应商A</td>
+                                            <td>300.00</td>
+                                            <td>2018/09/19</td>
+                                            <!--<td>3年</td>-->
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>轮胎</td>
+                                            <!--<td>米其林</td>-->
+                                            <td>供应商A</td>
+                                            <td>300.00</td>
+                                            <td>2018/09/19</td>
+                                            <!--<td>3年</td>-->
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>轮胎</td>
+                                            <!--<td>米其林</td>-->
+                                            <td>供应商A</td>
+                                            <td>300.00</td>
+                                            <td>2018/09/19</td>
+                                            <!--<td>3年</td>-->
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>轮胎</td>
+                                            <!--<td>米其林</td>-->
+                                            <td>供应商A</td>
+                                            <td>300.00</td>
+                                            <td>2018/09/19</td>
+                                            <!--<td>3年</td>-->
+                                            <td>20</td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn">首页</button>
+                            <button class="btn">上一页</button>
+                            <button class="btn">下一页</button>
+                            <button class="btn">尾页</button>
+                        </div>
+
+                    </div>
+
+                    <!--综合查询结束-->
+                </div>
+                <!--查询统计结束-->
+            </section>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <i class="glyphicon glyphicon-list"></i>
+            <p>我的信息</p>
+        </div>
+        <div>
+            <i class="glyphicon glyphicon-list-alt"></i>
+            <p>消费详情</p>
+        </div>
+        <div>
+            <i class="glyphicon glyphicon-usd"></i>
+            <p>赚钱</p>
+        </div>
+    </footer>
+</div>
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<script type="text/javascript" src="../../static/js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="../../static/js/echarts.min.js"></script>
+<script type="text/javascript" src="../../static/js/moment.js"></script>
+<script type="text/javascript" src="../../static/js/daterangepicker.js"></script>
+<!--日期JS-->
+<script type="text/javascript">
+    var locale = {
+        "format": 'YYYY-MM-DD',
+        "separator": " - ",//
+        "applyLabel": "确定",
+        "cancelLabel": "取消",
+        "fromLabel": "起始时间",
+        "toLabel": "结束时间'",
+        "customRangeLabel": "自定义",
+        "weekLabel": "W",
+        "daysOfWeek": ["日", "一", "二", "三", "四", "五", "六"],
+        "monthNames": ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+        "firstDay": 1
+    };
+            $('#daterange-btn').daterangepicker({
+            "locale": locale,
+            ranges: {
+                '本周': [moment().startOf('week'), moment().endOf('week')],
+                '本月': [moment().startOf('month'), moment().endOf('month')]
+            },
+            startDate: moment(),
+            endDate: moment().endOf('month')
+        },
+        function(start, end) {
+            $('#daterange-btn span').html(start.format('YYYY/MM/DD') + ' - ' + end.format('YYYY/MM/DD'));
+            //alert(start.format('YYYYMMDD') + " " + end.format('YYYYMMDD'));
+        }
+    );
+    $('#daterange-btn2').daterangepicker({
+            "locale": locale,
+            ranges: {
+                '本周': [moment().startOf('week'), moment().endOf('week')],
+                '本月': [moment().startOf('month'), moment().endOf('month')]
+            },
+            startDate: moment(),
+            endDate: moment().endOf('month')
+        },
+        function(start, end) {
+            $('#daterange-btn2 span').html(start.format('YYYY/MM/DD') + ' - ' + end.format('YYYY/MM/DD'));
+            //alert(start.format('YYYYMMDD') + " " + end.format('YYYYMMDD'));
+        }
+    );
+    $('#daterange-btn3').daterangepicker({
+            "locale": locale,
+            ranges: {
+                '本周': [moment().startOf('week'), moment().endOf('week')],
+                '本月': [moment().startOf('month'), moment().endOf('month')]
+            },
+            startDate: moment(),
+            endDate: moment().endOf('month')
+        },
+        function(start, end) {
+            $('#daterange-btn3 span').html(start.format('YYYY/MM/DD') + ' - ' + end.format('YYYY/MM/DD'));
+            //alert(start.format('YYYYMMDD') + " " + end.format('YYYYMMDD'));
+        }
+    );
+
+    //Date picker
+    // $('#datepicker').datepicker({
+    //     autoclose: true
+    // });
+</script>
+<!--柱状图JS-->
+<script type="text/javascript">
+    var dom = document.getElementById("ThreeBar");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    app.title = '堆叠柱状图';
+
+    option = {
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        legend: {
+            data:['充值','消费']
+        },
+        grid: {
+            top:'12%',
+            left: '0%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true,
+            borderWidth: 1,
+            height:150
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : ['1.1','1.2','1.3','1.4','1.5','1.6','1.7']
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:'充值',
+                type:'bar',
+                data:[320, 632, 771, 934, 390, 630, 920]
+            },
+            {
+                name:'消费',
+                type:'bar',
+                stack: '广告',
+                data:[420, 332, 201, 734, 90, 630, 810]
+            }
+        ]
+    };
+    ;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+</script>
+<!--饼状图JS-->
+
+<script type="text/javascript">
+    var dom = document.getElementById("ThreePie");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    option = {
+        title : {
+            x:'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        series : [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius : '75%',
+                center: ['50%', '50%'],
+                data:[
+                    {value:635, name:'洗车'},
+                    {value:310, name:'修车'},
+                    {value:34, name:'其他'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    ;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+</script>
+
+</body>
+</html>

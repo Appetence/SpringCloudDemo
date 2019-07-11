@@ -1,0 +1,140 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>营销活动详情</title>
+<link rel="stylesheet" href="../../static/css/bootstrap.css"/>
+<link rel="stylesheet" href="../../static/css/commom.css"/>
+<link rel="stylesheet" href="../../static/css/staReport.css"/>
+<link rel="stylesheet" href="../../static/css/spareInfo.css"/>
+<link rel="stylesheet" href="../../static/css/onSale.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/css/iconfont.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 bcg-head text-center" style="">
+            <div>
+                <img src="../../static/images/d4.jpg" alt="" style="margin-top: 16%;">
+                <p style="margin-top: 5px;">
+                    <span>张三</span>
+                </p>
+                <p class="text-center NO" style="left: 0rem;">
+                    <span class="iconfont  icon-huiyuanqia-xianxing" style="font-size: 16px!important;"></span>
+                    <br>
+                    <span>ID-123456</span>
+                </p>
+                <p class="text-center NO" style="right: 0rem;">
+                    <span class="iconfont  icon-jifen" style="font-size: 16px!important;"></span>
+                    <br>
+                    <span>345</span>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-12 info-con">
+            <p class="titleP"><i class="iconfont icon-peijian"></i> 营销活动详情</p>
+            <section class="sec">
+              <div class="toUpSec repairDiv" style="margin-top:0.2rem;">
+                        <div class="row">
+                            <span class="col-md-2">活动类型</span>
+                            <span class="col-md-10">
+                <select name="" id="" class="form-control">
+                <option value="">抽奖</option>
+                <option value="">抽奖2</option>
+                <option value="">抽奖3</option>
+                </select>
+                </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2">活动名称</span>
+                            <span class="col-md-10">
+<input type="text" value="幸运抽奖" class="form-control">
+                </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2" style="vertical-align: top;">活动描述</span>
+                            <span class="col-md-10">
+                <textarea name="" id="" cols="30" rows="5"  class="form-control" placeholder="多行输入"></textarea>
+                            </span>
+                        </div>
+                  <div class="row">
+                      <span class="col-md-2">创建日期</span>
+                      <span class="col-md-10">
+<input type="date" class="form-control">
+                </span>
+                  </div>
+                        <div class="row">
+                            <span class="col-md-2">结束日期</span>
+                            <span class="col-md-10">
+<input type="date" class="form-control">
+                </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2">条件限制</span>
+                            <span class="col-md-10">
+                </span>
+                        </div>
+                        <div class="row">
+                            <span class="col-md-2">选择卡券</span>
+                            <span class="col-md-10">
+                </span>
+                        </div>
+                  <div class="row">
+                      <span class="col-md-2">活动模板</span>
+                      <span class="col-md-10">
+<input type="text" value="抽奖模板1" class="form-control">
+                </span>
+                  </div>
+                  <div class="row">
+                      <span class="col-md-2">活动链接</span>
+                      <span class="col-md-10">
+<input type="text" value="" class="form-control">
+                </span>
+                  </div>
+                  <div class="row">
+                      <span class="col-md-2">活动二维码</span>
+                      <span class="col-md-10">
+                </span>
+                  </div>
+
+                    </div>
+            </section>
+        </div>
+    </div>
+
+</div>
+<footer>
+    <div>
+        <i class="glyphicon glyphicon-list"></i>
+        <p>我的信息</p>
+    </div>
+    <div>
+        <i class="glyphicon glyphicon-list-alt"></i>
+        <p>消费详情</p>
+    </div>
+    <div>
+        <i class="glyphicon glyphicon-usd"></i>
+        <p>赚钱</p>
+    </div>
+</footer>
+<script>
+	(function (doc, win) {
+	  var docEl = doc.documentElement,
+		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		recalc = function () {
+		  var clientWidth = docEl.clientWidth;
+		  if (!clientWidth) return;
+		  docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+		};
+
+	  if (!doc.addEventListener) return;
+	  win.addEventListener(resizeEvt, recalc, false);
+	  doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+<script type="text/javascript" src="../../static/js/jquery-2.2.3.min.js"></script>
+</body>
+</html>

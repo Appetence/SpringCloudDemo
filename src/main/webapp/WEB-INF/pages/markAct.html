@@ -1,0 +1,143 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>营销活动</title>
+<link rel="stylesheet" href="../../static/css/bootstrap.css"/>
+<link rel="stylesheet" href="../../static/css/commom.css"/>
+<link rel="stylesheet" href="../../static/css/staReport.css"/>
+<link rel="stylesheet" href="../../static/css/spareInfo.css"/>
+<link rel="stylesheet" href="../../static/css/onSale.css"/>
+<link rel="stylesheet" type="text/css" href="../../static/css/iconfont.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 bcg-head text-center" style="">
+            <div>
+                <img src="../../static/images/d4.jpg" alt="" style="margin-top: 16%;">
+                <p style="margin-top: 5px;">
+                    <span>张三</span>
+                </p>
+                <p class="text-center NO" style="left: 0rem;">
+                    <span class="iconfont  icon-huiyuanqia-xianxing" style="font-size: 16px!important;"></span>
+                    <br>
+                    <span>ID-123456</span>
+                </p>
+                <p class="text-center NO" style="right: 0rem;">
+                    <span class="iconfont  icon-jifen" style="font-size: 16px!important;"></span>
+                    <br>
+                    <span>345</span>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-12 info-con">
+            <section class="sec">
+                <div id="">
+                    <p class="titleP"><i class="iconfont icon-peijian"></i> 我的专属二维码</p>
+                    <div class="" style="height: 150px;border: 1px solid #333;"></div>
+                    <div class="text-center" style="margin-top: 10px;margin-top: 0.2rem;">
+                        <button class="btn">生成二维码</button>
+                        <button class="btn">下载二维码</button>
+                    </div>
+
+                </div>
+                <div id="">
+                    <p class="titleP"><i class="iconfont icon-peijian"></i> 我参加的活动</p>
+                    <div class="tableDiv">
+                        <div style="width: 270%;">
+                            <form action="">
+                                <table class="table" style="margin-top: 0rem;">
+                                    <tr>
+                                        <th>活动类型</th>
+                                        <th>活动名称</th>
+                                        <th>活动描述</th>
+                                        <th>中奖情况</th>
+                                        <th>结束时间</th>
+                                        <th>活动状态</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    <tr>
+                                        <td>注册</td>
+                                        <td>10</td>
+                                        <td>2018-09-08</td>
+                                        <td>199</td>
+                                        <td>199</td>
+                                        <td>2019-09-08</td>
+                                        <td><a href="">活动详情</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>注册</td>
+                                        <td>10</td>
+                                        <td>2018-09-08</td>
+                                        <td>199</td>
+                                        <td>199</td>
+                                        <td>2019-09-08</td>
+                                        <td><a href="">活动详情</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>注册</td>
+                                        <td>10</td>
+                                        <td>2018-09-08</td>
+                                        <td>199</td>
+                                        <td>199</td>
+                                        <td>2019-09-08</td>
+                                        <td><a href="">活动详情</a></td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn">首页</button>
+                        <button class="btn">上一页</button>
+                        <button class="btn">下一页</button>
+                        <button class="btn">尾页</button>
+                    </div>
+                    <div class="text-center" style="color: red;margin-top: 10px;margin-top: 0.2rem;">
+                        * 分享我的营销二维码以及我参加的活动可返积分
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+</div>
+<footer>
+    <div>
+        <i class="glyphicon glyphicon-list"></i>
+        <p>我的信息</p>
+    </div>
+    <div>
+        <i class="glyphicon glyphicon-list-alt"></i>
+        <p>消费详情</p>
+    </div>
+    <div>
+        <i class="glyphicon glyphicon-usd"></i>
+        <p>赚钱</p>
+    </div>
+</footer>
+<script>
+	(function (doc, win) {
+	  var docEl = doc.documentElement,
+		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		recalc = function () {
+		  var clientWidth = docEl.clientWidth;
+		  if (!clientWidth) return;
+		  docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+		};
+
+	  if (!doc.addEventListener) return;
+	  win.addEventListener(resizeEvt, recalc, false);
+	  doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+<script type="text/javascript" src="../../static/js/jquery-2.2.3.min.js"></script>
+
+</body>
+</html>

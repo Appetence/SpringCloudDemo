@@ -1,0 +1,156 @@
+.sec div {
+    clear: both;
+    /*padding: 10px 5px 30px;*/
+    border-bottom: 1px dashed #999;
+    padding: 2px 0px;
+    padding: 0.08rem 0rem;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sec div span:nth-child(1) {
+    display: inline-block;
+    width: 32%;
+    padding: 0px 10px;
+    padding: 0rem 0.2rem;
+}
+
+.sec div span:nth-child(2) {
+    display: inline-block;
+    width: 65%;
+    padding: 0px;
+    background-color: transparent;
+}
+
+.sec input, .sec select {
+    border: none;
+	appearance:none !important;
+	background-color:transparent;
+}
+
+ input[type=date]::-webkit-inner-spin-button {
+	 visibility: hidden; 
+	 }
+
+.secCar-top {
+    background-color: #48a3da;
+    color: white;
+    border-top-right-radius: 0.2rem;
+    border-top-left-radius: 0.2rem;
+    padding: 0.2rem 0.4rem;
+}
+
+.secCar-top > div {
+    display: inline-block
+}
+
+.secCar-top p {
+    margin-bottom: 0.05rem !important;
+}
+
+.secCar-top .secCarI {
+    font-size: 30px !important;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.2rem;
+    vertical-align: middle;
+}
+
+.secCar-con {
+    background-color: white;
+    border-bottom-right-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+    padding: 0.15rem 0.4rem;
+}
+
+.secCar-con div {
+    height: 28px;
+    line-height: 28px;
+}
+
+.secCar-con div span:nth-child(1) {
+    display: inline-block;
+    width: 27%;
+}
+
+.secCar-con div span:nth-child(2) {
+    display: inline-block;
+    width: 70%;
+}
+
+.simpleAlert {
+    position: fixed;
+    z-index: 1000;
+}
+
+.simpleAlertShelter {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+
+.simpleAlertBody {
+    position: fixed;
+    width: 80%;
+    height: 170px;
+    top: 30%;
+    left: 10%;
+    background-color: #fff;
+    border-radius: 5%;
+}
+
+.simpleAlertBodyClose {
+    position: absolute;
+    top: -25px;
+    right: -20px;
+    padding: 5px;
+    font-size: 20px;
+    color: #48a3da;
+}
+
+.simpleAlertBodyContent {
+    position: absolute;
+    top: 22%;
+    width: 96%;
+    height: 48px;
+    overflow-y: auto;
+    left: 2%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.simpleAlertBtn {
+    position: absolute;
+    width: 70px;
+    height: 34px;
+    top: 60%;
+    border: 1px solid #bfbfbf;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.simpleAlertBtn1 {
+    left: 15%;
+}
+
+.simpleAlertBtn2 {
+    right: 15%;
+}
+
+.onlyOne {
+    width: 200px;
+    height: 36px;
+    left: 138px;
+}

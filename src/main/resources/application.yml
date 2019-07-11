@@ -1,0 +1,94 @@
+ server: 
+#  context-path: /mariadb
+  servlet.context-path: /mariadb
+  port: 8081
+  session: 
+    timeout: 900
+ 
+## Spring配置 
+ spring:  
+   http: 
+     encoding: 
+       charset: UTF-8
+#     multipart:
+#        maxFileSize: 10Mb
+#        maxRequestSize: 1000Mb
+#设置静态文件路径css,js,图片等等
+   mvc:
+      static-path-pattern: /static/**
+      view:
+         prefix: /WEB-INF/jsp/
+         suffix:  .jsp
+# jackson jar格式化时间，排除非空
+ jackson: 
+   data-format: yyyy-MM-dd HH:mm:ss
+   time-zone: GMT+8
+   default-property-inclusion: NON_NULL
+#指定数据源
+ druid:
+   type: com.alibaba.druid.pool.DruidDataSource
+#主库
+   master:
+      url: jdbc:mysql://192.168.1.198:3306/mail-1.0?characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=CONVERT_TO_NULL&useUnicode=true&userSSL=false&serverTimezone=GMT%2B8
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root
+      initialSize: 5
+      minIdle: 1
+      maxActive: 100
+      maxWait: 60000
+      timeBetweenEvictionRUnMillis: 60000
+      minEvictableIdeleTimeMillis: 300000
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      filters: stat,wall,log4j
+      useGlobalDataSourceStat: true 
+#从库
+   slave:  
+      url: jdbc:mysql://192.168.1.199:3306/mail-1.0?characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=CONVERT_TO_NULL&useUnicode=true&userSSL=false&serverTimezone=GMT%2B8
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root
+      initialSize: 5
+      minIdle: 1
+      maxActive: 100
+      maxWait: 60000
+      timeBetweenEvictionRUnMillis: 60000
+      minEvictableIdeleTimeMillis: 300000
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      filters: stat,wall,log4j
+      useGlobalDataSourceStat: true
+# tk.mybatis jar
+ mybatis: 
+    type-aliases-package: com.mybatis.mariadb
+    mapper-locations: classpath:mapper/**Mapping.xml
+#日志配置
+ logging: 
+    level:
+      tk.mybatis: TRACE
+ 
+ pagehelper:  
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+#开启关闭swagger   生产环境要关闭swagger  true开启  false  关闭
+ swagger:
+    enable: true
+    
+#文件存放位置
+ domain: 
+    localLoad: F:/springboot/sismanager/src/main/resources/static/upload
+
+
+       
+       
