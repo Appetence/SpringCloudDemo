@@ -36,7 +36,8 @@
         </javaClientGenerator>
  
         <!-- 指定数据库表 如果多个表指定多个table-->
-        <table schema="" tableName="department">
-        </table>
+        <!-- <table schema="" tableName="department"></table>-->
+        <table schema="" tableName="mail_send1"></table> 
+        <table schema="" tableName="mail_send2"></table>
     </context>
 </generatorConfiguration>

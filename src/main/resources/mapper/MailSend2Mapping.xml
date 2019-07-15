@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springboot.mariadb.mapper.MailSend2Mapper">
+  <resultMap id="BaseResultMap" type="com.springboot.mariadb.entity.MailSend">
+    <id column="send_id" jdbcType="VARCHAR" property="sendId" />
+    <result column="send_user_id" jdbcType="VARCHAR" property="sendUserId" />
+    <result column="send_to" jdbcType="VARCHAR" property="sendTo" />
+    <result column="send_content" jdbcType="VARCHAR" property="sendContent" />
+    <result column="send_priority" jdbcType="DOUBLE" property="sendPriority" />
+    <result column="send_count" jdbcType="DOUBLE" property="sendCount" />
+    <result column="send_status" jdbcType="VARCHAR" property="sendStatus" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="version" jdbcType="DOUBLE" property="version" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    send_id, send_user_id, send_to, send_content, send_priority, send_count, send_status, 
+    remark, version, update_by, update_time
+  </sql>
+  <select id="selectByExample" parameterType="com.springboot.mariadb.entity.MailSendExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from mail_send2
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from mail_send2
+    where send_id = #{sendId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from mail_send2
+    where send_id = #{sendId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.springboot.mariadb.entity.MailSendExample">
+    delete from mail_send2
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.springboot.mariadb.entity.MailSend">
+    insert into mail_send2 (send_id, send_user_id, send_to, 
+      send_content, send_priority, send_count, 
+      send_status, remark, version, 
+      update_by, update_time)
+    values (#{sendId,jdbcType=VARCHAR}, #{sendUserId,jdbcType=VARCHAR}, #{sendTo,jdbcType=VARCHAR}, 
+      #{sendContent,jdbcType=VARCHAR}, #{sendPriority,jdbcType=DOUBLE}, #{sendCount,jdbcType=DOUBLE}, 
+      #{sendStatus,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{version,jdbcType=DOUBLE}, 
+      #{updateBy,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.springboot.mariadb.entity.MailSend">
+    insert into mail_send2
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="sendId != null">
+        send_id,
+      </if>
+      <if test="sendUserId != null">
+        send_user_id,
+      </if>
+      <if test="sendTo != null">
+        send_to,
+      </if>
+      <if test="sendContent != null">
+        send_content,
+      </if>
+      <if test="sendPriority != null">
+        send_priority,
+      </if>
+      <if test="sendCount != null">
+        send_count,
+      </if>
+      <if test="sendStatus != null">
+        send_status,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="updateBy != null">
+        update_by,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="sendId != null">
+        #{sendId,jdbcType=VARCHAR},
+      </if>
+      <if test="sendUserId != null">
+        #{sendUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="sendTo != null">
+        #{sendTo,jdbcType=VARCHAR},
+      </if>
+      <if test="sendContent != null">
+        #{sendContent,jdbcType=VARCHAR},
+      </if>
+      <if test="sendPriority != null">
+        #{sendPriority,jdbcType=DOUBLE},
+      </if>
+      <if test="sendCount != null">
+        #{sendCount,jdbcType=DOUBLE},
+      </if>
+      <if test="sendStatus != null">
+        #{sendStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=DOUBLE},
+      </if>
+      <if test="updateBy != null">
+        #{updateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.springboot.mariadb.entity.MailSendExample" resultType="java.lang.Long">
+    select count(*) from mail_send2
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update mail_send2
+    <set>
+      <if test="record.sendId != null">
+        send_id = #{record.sendId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sendUserId != null">
+        send_user_id = #{record.sendUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sendTo != null">
+        send_to = #{record.sendTo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sendContent != null">
+        send_content = #{record.sendContent,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sendPriority != null">
+        send_priority = #{record.sendPriority,jdbcType=DOUBLE},
+      </if>
+      <if test="record.sendCount != null">
+        send_count = #{record.sendCount,jdbcType=DOUBLE},
+      </if>
+      <if test="record.sendStatus != null">
+        send_status = #{record.sendStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.version != null">
+        version = #{record.version,jdbcType=DOUBLE},
+      </if>
+      <if test="record.updateBy != null">
+        update_by = #{record.updateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update mail_send2
+    set send_id = #{record.sendId,jdbcType=VARCHAR},
+      send_user_id = #{record.sendUserId,jdbcType=VARCHAR},
+      send_to = #{record.sendTo,jdbcType=VARCHAR},
+      send_content = #{record.sendContent,jdbcType=VARCHAR},
+      send_priority = #{record.sendPriority,jdbcType=DOUBLE},
+      send_count = #{record.sendCount,jdbcType=DOUBLE},
+      send_status = #{record.sendStatus,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      version = #{record.version,jdbcType=DOUBLE},
+      update_by = #{record.updateBy,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.springboot.mariadb.entity.MailSend">
+    update mail_send2
+    <set>
+      <if test="sendUserId != null">
+        send_user_id = #{sendUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="sendTo != null">
+        send_to = #{sendTo,jdbcType=VARCHAR},
+      </if>
+      <if test="sendContent != null">
+        send_content = #{sendContent,jdbcType=VARCHAR},
+      </if>
+      <if test="sendPriority != null">
+        send_priority = #{sendPriority,jdbcType=DOUBLE},
+      </if>
+      <if test="sendCount != null">
+        send_count = #{sendCount,jdbcType=DOUBLE},
+      </if>
+      <if test="sendStatus != null">
+        send_status = #{sendStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=DOUBLE},
+      </if>
+      <if test="updateBy != null">
+        update_by = #{updateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where send_id = #{sendId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.springboot.mariadb.entity.MailSend">
+    update mail_send2
+    set send_user_id = #{sendUserId,jdbcType=VARCHAR},
+      send_to = #{sendTo,jdbcType=VARCHAR},
+      send_content = #{sendContent,jdbcType=VARCHAR},
+      send_priority = #{sendPriority,jdbcType=DOUBLE},
+      send_count = #{sendCount,jdbcType=DOUBLE},
+      send_status = #{sendStatus,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      version = #{version,jdbcType=DOUBLE},
+      update_by = #{updateBy,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where send_id = #{sendId,jdbcType=VARCHAR}
+  </update>
+</mapper>

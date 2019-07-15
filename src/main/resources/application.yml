@@ -19,6 +19,16 @@
       view:
          prefix: /WEB-INF/jsp/
          suffix:  .jsp
+   redis:
+      pool:
+         min-idle: 100
+         max-idle: 100
+         max-wait: -1
+         max-active: 1000
+      timeout: 6000
+      cluster:
+         max-reidrects: 1000
+         
 # jackson jar格式化时间，排除非空
  jackson: 
    data-format: yyyy-MM-dd HH:mm:ss
